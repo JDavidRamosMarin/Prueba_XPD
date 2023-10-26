@@ -1,0 +1,267 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- PELICULAS -->
+<div class="row-justify-center">
+    <div class="col-10">
+        <div class="alert alert-warning" role="alert">
+            PELICULAS
+        </div>
+        <button type="button" class="btn btn-success btn-nueva-pelicula">NUEVA PELICULA</button>
+
+        <table class="tableE" id="tablaPeliculas">
+            <thead>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Descripción</th>
+                    <th>Director</th>
+                    <th>Fecha de Estreno</th>
+                    <th>Idioma</th>
+                    <th>Precio</th>
+                    <th></th>
+
+                </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal Peliculas -->
+<div class="modal fade" id="PeliculasModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Peliculas</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <!--<span aria-hidden="true">&times;</span>-->
+                </button>
+            </div>
+            <div class="modal-body">
+                
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">Titulo</label>
+                        <input type="text" class="form-control" id="txtTituloPelicula" autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Descripción</label>
+                        <select class="form-select" id="idDescripcion-peliculas"></select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Director</label>
+                        <input type="text" class="form-control" id="txtDirector">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Fecha de estreno</label>
+                        <input type="text" class="form-control" id="txtFechaEstreno">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Idioma</label>
+                        <input type="text" class="form-control" id="txtIdioma">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Estatus</label>
+                        <input type="number" class="form-control" id="txtEstatus">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Precio</label>
+                        <select class="form-select" id="idPrecio-peliculas"></select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- GENERO -->
+<div class="row-justify-center">
+    <div class="col-10">
+        <div class="alert alert-warning" role="alert">
+            GENERO
+        </div>
+        <button type="button" class="btn btn-success btn-nuevo-Genero">NUEVO GENERO</button>
+
+        <table class="tableE" id="tablaGenero">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal Genero -->
+<div class="modal fade" id="GneroModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Generos</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="txtNombreGenero" autocomplete="off">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- BOLETO -->
+<div class="row-justify-center">
+    <div class="col-10">
+        <div class="alert alert-warning" role="alert">
+            BOLETO
+        </div>
+        <button type="button" class="btn btn-success btn-nuevo-Boleto">NUEVO BOLETO</button>
+
+        <table class="tableE" id="tablaPrecio">
+            <thead>
+                <tr>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal Boleto -->
+<div class="modal fade" id="BoletoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Boleto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">Precio</label>
+                        <input type="number" class="form-control" id="txtNombreGenero" autocomplete="off">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- VENTAS -->
+<div class="row-justify-center">
+    <div class="col-10">
+        <div class="alert alert-warning" role="alert">
+            VENTAS
+        </div>
+        <button type="button" class="btn btn-success btn-nueva-venta">NUEVA VENTA</button>
+
+        <table class="tableE" id="tablaVentas">
+            <thead>
+                <tr>
+                    <th>Pelicula</th>
+                    <th>Fecha de venta</th>
+                    <th>Fecha de Presentacion </th>
+                    <th>Asiento</th>
+                    <th>Sala</th>
+                    <th>Promoción</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal Ventas -->
+<div class="modal fade" id="VentasModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ventas</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">Pelicula</label>
+                        <select class="form-select" id="id-peliculas"></select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Fecha de Venta</label>
+                        <input type="text" class="form-control" id="txtFechaVenta">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Fecha de Presentación</label>
+                        <input type="text" class="form-control" id="txtFechaPresentacion">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Asiento</label>
+                        <input type="text" class="form-control" id="txtAsiento">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Sala</label>
+                        <input type="number" class="form-control" id="Sala">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Promoción</label>
+                        <input type="number" class="form-control" id="Promocion">
+                    </div>
+                </form>-
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-Cerrar" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-Agregar-Pelicula">Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script src="~/js/index.js"></script>
+}
